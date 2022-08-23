@@ -11,7 +11,7 @@ jobs:
       - name: Setup docker and login
         uses: Charlotte-z/workflows/setup_docker@main
         with:
-          registry: ghcr.io/geekrv/action-slack-notify:main
+          registry: ghcr.io/geekrv/action-slack:main
           username: ${{ github.actor }}
           password: ${{ secrets.TOKEN }}
 
@@ -21,4 +21,4 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/geekrv/action-slack-notify:main
+            ghcr.io/geekrv/action-slack:main
