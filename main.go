@@ -117,7 +117,7 @@ func main() {
 				field := []Field{
 					{
 						Title: "Actions URL",
-						Value: "<" + os.Getenv(EnvSlackActionUrl) ">",
+						Value: "<" + os.Getenv(EnvSlackActionUrl) + ">",
 						Short: true,
 					},
 				}
