@@ -1,0 +1,24 @@
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: build main go
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup docker and login
+        uses: Charlotte-z/workflows/setup_docker@main
+        with:
+          registry: ghcr.io/geekrv/action-slack-notify:main
+          username: ${{ github.actor }}
+          password: ${{ secrets.TOKEN }}
+
+      - name: Build image and push to GitHub Container Registry
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          push: true
+          tags: |
+            ghcr.io/geekrv/action-slack-notify:main
