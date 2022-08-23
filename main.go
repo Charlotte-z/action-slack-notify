@@ -147,7 +147,7 @@ func main() {
 			},
 			{
 				Title: "Actions URL",
-				Value: "<" + os.Getenv("GITHUB_SERVER_URL") + "/" + os.Getenv("GITHUB_REPOSITORY") + "/commit/" + os.Getenv("GITHUB_SHA") + "/checks|" + os.Getenv("GITHUB_WORKFLOW") + ">",
+				Value: "<" + os.Getenv(EnvSlackActionUrl) + ">",
 				Short: true,
 			},
 			{
