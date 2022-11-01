@@ -6,7 +6,7 @@ jobs:
     name: build main go
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup docker and login
         uses: Charlotte-z/workflows/setup_docker@main
